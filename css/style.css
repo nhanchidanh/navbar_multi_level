@@ -1,0 +1,208 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.15;
+    color: #111;
+}
+
+#header {
+    height: 60px;
+    position: relative;
+}
+
+nav {
+    background: #2c2c32;
+    position: fixed;
+    /* inset: 0; */
+    width: 100%;
+}
+
+
+#navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#navbar-brand #logo {
+    max-height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    /* padding: 10px 0; */
+    margin: 0;
+
+}
+
+#main-menu li {
+    position: relative;
+}
+
+#main-menu a {
+    color: #9d9d9d;
+    display: block;
+    padding: 20px 10px;
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+}
+
+#main-menu>li:hover>a {
+    color: #fff;
+}
+
+/* Style sub-menu */
+#main-menu .sub-menu {
+    position: absolute;
+    left: 0;
+    top: 59px;
+    width: 220px;
+    list-style: none;
+    padding: 15px 15px;
+    background: #333;
+    display: none;
+}
+
+#main-menu li:hover ul.sub-menu {
+    display: block;
+}
+
+#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+}
+
+#main-menu .sub-menu li:hover a {
+    color: #fff;
+}
+
+#download {
+    text-decoration: none;
+    color: #fff;
+    background-color: #0e7bd3;
+    font-weight: bold;
+    padding: 20px 30px;
+    position: relative;
+}
+
+#download:hover {
+    background-color: #005da4;
+}
+
+#download::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f063";
+    position: absolute;
+    left: 10px;
+    font-size: 15px;
+}
+
+
+#navbar-toggle {
+    font-size: 24px;
+    color: #fff;
+    padding-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#responsive-menu {
+    position: absolute;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    list-style: none;
+    top: 60px;
+    background-color: #333;
+    width: 100%;
+    margin: 0;
+    display: none;
+    left: 0;
+}
+
+#responsive-menu li {
+    position: relative;
+    border: 1px solid #3d3d43;
+}
+
+#responsive-menu li:last-child{
+    border: none;
+}
+
+#responsive-menu a {
+    color: #9d9d9d;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+#responsive-menu .sub-menu {
+    background: #38383d;
+    list-style: none;
+    padding: 5px 20px;
+    display: none;
+}
+
+.responsive-menu-toggle {
+    position: absolute;
+    top: 0px;
+    right: 17px;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+.responsive-menu-toggle.open{
+    transform: rotate(180deg);
+}
+
+#responsive-menu>li:hover>a,
+#responsive-menu .sub-menu li:hover a {
+    color: #fff;
+}
+
+
+/* Responsive */
+/* Tablet and mobile */
+@media (max-width: 1023px) {
+
+    #main-menu,
+    #download {
+        display: none;
+    }
+
+    #navbar-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 739px) {}
+
+@media (min-width:740px) and (max-width: 1023px) {}
